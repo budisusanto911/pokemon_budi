@@ -2,6 +2,7 @@ package dev.budisusanto.pokedex.ui.dashboard.about
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,7 @@ import kotlinx.android.synthetic.main.spirit.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.math.log
 
 class AboutFragment : Fragment() {
 
@@ -48,6 +50,7 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = checkNotNull(arguments?.getString("id"))
+        Log.i("TAG", "onViewCreated: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+id.replace("#", "").replace("0", "")+".png" )
         var abiliti = ""
         val recyclerView = rvWeakness
         val layoutManager = GridLayoutManager(context, 3)
@@ -94,19 +97,19 @@ class AboutFragment : Fragment() {
                 }
                 adapter.setList(listType)
                 adapter.notifyDataSetChanged()
-                dashboardViewModel.getPokemonById(id).observe(viewLifecycleOwner, Observer { pokemonValue ->
+                /*dashboardViewModel.getPokemonById(id).observe(viewLifecycleOwner, Observer { pokemonValue ->
                     pokemonValue?.let { pokemon ->
                         val evolutions = pokemon.evolutions ?: emptyList()
-                dashboardViewModel.getPokemonEvolutionsByIds(evolutions).observe(viewLifecycleOwner, Observer {
+                dashboardViewModel.getPokemonEvolutionsByIds(evolutions).observe(viewLifecycleOwner, Observer {*/
                     Glide.with(view.context)
-                        .load(it[0].imageurl)
+                        .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+id.replace("#", "").replace("0", "")+".png")
                         .placeholder(android.R.color.transparent)
                         .into(imageViewNormal)
                     Glide.with(view.context)
-                        .load(it[it.size-1].imageurl)
+                        .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+id.replace("#", "").replace("0", "")+".png")
                         .placeholder(android.R.color.transparent)
                         .into(imageViewShiny)
-                })}})
+                //})}})
             }
         })
     }
