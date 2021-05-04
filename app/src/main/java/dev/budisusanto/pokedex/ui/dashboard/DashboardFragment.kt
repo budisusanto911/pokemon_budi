@@ -57,7 +57,9 @@ class DashboardFragment : Fragment() {
                         .load(App().checkInt(thirdType ?: ""))
                         .placeholder(android.R.color.transparent)
                         .into(textViewType3)
+                    txtViewType3.text = thirdType
                     textViewType3.isVisible = thirdType != null
+                    txtViewType3.isVisible = thirdType != null
                 }
 
                 pokemon.typeofpokemon?.getOrNull(1).let { secondType ->
@@ -65,7 +67,9 @@ class DashboardFragment : Fragment() {
                         .load(App().checkInt(secondType ?: ""))
                         .placeholder(android.R.color.transparent)
                         .into(textViewType2)
+                    txtViewType2.text = secondType
                     textViewType2.isVisible = secondType != null
+                    txtViewType2.isVisible = secondType != null
                 }
 
                 pokemon.typeofpokemon?.getOrNull(2).let { firstType ->
@@ -73,7 +77,9 @@ class DashboardFragment : Fragment() {
                         .load(App().checkInt(firstType ?: ""))
                         .placeholder(android.R.color.transparent)
                         .into(textViewType1)
+                    txtViewType1.text = firstType
                     textViewType1.isVisible =  firstType!= null
+                    txtViewType1.isVisible =  firstType!= null
                 }
 
                 Glide.with(view.context)
