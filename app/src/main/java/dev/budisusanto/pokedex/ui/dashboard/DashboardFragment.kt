@@ -36,7 +36,6 @@ class DashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val id = checkNotNull(arguments?.getString("id"))
         dashboardViewModel.getPokemonById(id).observe(viewLifecycleOwner, Observer { pokemonValue ->
             pokemonValue?.let { pokemon ->
@@ -90,6 +89,9 @@ class DashboardFragment : Fragment() {
             }
         })
         app_bar.addOnOffsetChangedListener(appBarOffsetChangedListener)
+        tv_exit.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
 
     }
     private val appBarOffsetChangedListener =

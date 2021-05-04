@@ -6,7 +6,6 @@ import android.graphics.PorterDuffColorFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
@@ -64,7 +63,6 @@ class PokemonAdapter(
                 val bundle = bundleOf("id" to item.id)
                 it.findNavController()
                     .navigate(R.id.action_navigation_pokedex_to_navigation_dashboard, bundle)
-
             }
         }
     }

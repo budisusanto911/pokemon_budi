@@ -36,7 +36,13 @@
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
-
+                <ImageView
+                    android:src="@drawable/down_arrow"
+                    android:id="@+id/tv_exit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingStart="20dp"
+                    tools:ignore="ContentDescription" />
             </androidx.appcompat.widget.Toolbar>
 
             <RelativeLayout
