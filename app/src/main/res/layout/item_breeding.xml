@@ -106,8 +106,8 @@
             android:layout_gravity="bottom"
             android:id="@+id/progress"
             style="@style/CircularDeterminateProgressBar"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
             android:visibility="visible"
             android:background="@drawable/gender"/>
     </LinearLayout>
