@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_pokedex">
+
+    <fragment
+        android:id="@+id/navigation_pokedex"
+        android:name="dev.budisusanto.pokedex.ui.pokedex.PokedexFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_pokedex" >
+        <action
+            android:id="@+id/action_navigation_pokedex_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="dev.budisusanto.pokedex.ui.dashboard.DashboardFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="dev.budisusanto.pokedex.ui.dashboard.about.AboutFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/navigation_evolution"
+        android:name="dev.budisusanto.pokedex.ui.dashboard.evolution.EvolutionFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_evolution" />
+
+
+</navigation>
