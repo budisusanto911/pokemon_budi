@@ -22,11 +22,11 @@ class App : Application() {
         when {
             nama.toLowerCase(Locale.getDefault()) == "normal" -> int = R.drawable.normal
             nama.toLowerCase(Locale.getDefault()) == "electric" -> int = R.drawable.electrik
-            nama.toLowerCase(Locale.getDefault()) == "psychic" -> int = R.drawable.mystic
+            nama.toLowerCase(Locale.getDefault()) == "psychic" -> int = R.drawable.psyschic
             nama.toLowerCase(Locale.getDefault()) == "flying" -> int = R.drawable.flying
             nama.toLowerCase(Locale.getDefault()) == "fire" -> int = R.drawable.fire
-            nama.toLowerCase(Locale.getDefault()) == "water" -> int = R.drawable.water
-            nama.toLowerCase(Locale.getDefault()) == "ice" -> int = R.drawable.es
+            nama.toLowerCase(Locale.getDefault()) == "water" -> int = R.drawable.white
+            nama.toLowerCase(Locale.getDefault()) == "ice" -> int = R.drawable.ice
             nama.toLowerCase(Locale.getDefault()) == "grass" -> int = R.drawable.grass
             nama.toLowerCase(Locale.getDefault()) == "poison" -> int = R.drawable.poison
             nama.toLowerCase(Locale.getDefault()) == "ghost" -> int = R.drawable.ghost
@@ -38,6 +38,7 @@ class App : Application() {
             nama.toLowerCase(Locale.getDefault()) == "dark" -> int = R.drawable.dark
             nama.toLowerCase(Locale.getDefault()) == "rock" -> int = R.drawable.rock
             nama.toLowerCase(Locale.getDefault()) == "fairy" -> int = R.drawable.fairy
+            nama.toLowerCase(Locale.getDefault()) == "psyschic" -> int = R.drawable.psyschic
         }
         return int
     }
