@@ -1,20 +1,22 @@
 package dev.budisusanto.pokedex.ui.pokedex
 
 import android.content.Context
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.budisusanto.pokedex.App
-import dev.budisusanto.pokedex.MainActivity
 import dev.budisusanto.pokedex.R
 import dev.budisusanto.pokedex.model.Pokemon
+import dev.budisusanto.pokedex.utils.PokemonColorUtil
 import kotlinx.android.synthetic.main.item_pokemon.view.*
-import java.util.*
 
 class PokemonAdapter(
     private val list: List<Pokemon>,
@@ -55,10 +57,14 @@ class PokemonAdapter(
                 .placeholder(android.R.color.transparent)
                 .into(itemView.imageView)
 
-            itemView.setOnClickListener {
+
+            itemView.rel_image.setOnClickListener {
+                val color = PokemonColorUtil(itemView.context).getPokemonColor(item.typeofpokemon)
+                it.background.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 val bundle = bundleOf("id" to item.id)
                 it.findNavController()
                     .navigate(R.id.action_navigation_pokedex_to_navigation_dashboard, bundle)
+
             }
         }
     }
