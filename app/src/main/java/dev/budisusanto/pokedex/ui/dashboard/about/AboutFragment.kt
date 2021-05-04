@@ -50,7 +50,6 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = checkNotNull(arguments?.getString("id"))
-        Log.i("TAG", "onViewCreated: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+id.replace("#", "").replace("0", "")+".png" )
         var abiliti = ""
         val recyclerView = rvWeakness
         val layoutManager = GridLayoutManager(context, 3)
@@ -97,19 +96,15 @@ class AboutFragment : Fragment() {
                 }
                 adapter.setList(listType)
                 adapter.notifyDataSetChanged()
-                /*dashboardViewModel.getPokemonById(id).observe(viewLifecycleOwner, Observer { pokemonValue ->
-                    pokemonValue?.let { pokemon ->
-                        val evolutions = pokemon.evolutions ?: emptyList()
-                dashboardViewModel.getPokemonEvolutionsByIds(evolutions).observe(viewLifecycleOwner, Observer {*/
-                    Glide.with(view.context)
+                Glide.with(view.context)
                         .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/"+id.replace("#", "").replace("0", "")+".png")
                         .placeholder(android.R.color.transparent)
                         .into(imageViewNormal)
-                    Glide.with(view.context)
-                        .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+id.replace("#", "").replace("0", "")+".png")
-                        .placeholder(android.R.color.transparent)
-                        .into(imageViewShiny)
-                //})}})
+                Glide.with(view.context)
+                    .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/"+id.replace("#", "").replace("0", "")+".png")
+                    .placeholder(android.R.color.transparent)
+                    .into(imageViewShiny)
+
             }
         })
     }
