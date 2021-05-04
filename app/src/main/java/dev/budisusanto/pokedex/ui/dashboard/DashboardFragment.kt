@@ -60,6 +60,8 @@ class DashboardFragment : Fragment() {
                     txtViewType3.text = thirdType
                     textViewType3.isVisible = thirdType != null
                     txtViewType3.isVisible = thirdType != null
+                    val color = PokemonColorUtil(lay3.context).getPokemonColorItem(thirdType)
+                    lay3.background.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 }
 
                 pokemon.typeofpokemon?.getOrNull(1).let { secondType ->
@@ -70,6 +72,8 @@ class DashboardFragment : Fragment() {
                     txtViewType2.text = secondType
                     textViewType2.isVisible = secondType != null
                     txtViewType2.isVisible = secondType != null
+                    val color = PokemonColorUtil(lay2.context).getPokemonColorItem(secondType)
+                    lay2.background.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 }
 
                 pokemon.typeofpokemon?.getOrNull(2).let { firstType ->
@@ -80,6 +84,8 @@ class DashboardFragment : Fragment() {
                     txtViewType1.text = firstType
                     textViewType1.isVisible =  firstType!= null
                     txtViewType1.isVisible =  firstType!= null
+                    val color = PokemonColorUtil(lay1.context).getPokemonColorItem(firstType)
+                    lay1.background.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 }
 
                 Glide.with(view.context)

@@ -99,74 +99,91 @@
                             tools:text="#001" />
 
                         <LinearLayout
+                            android:orientation="horizontal"
                             android:id="@+id/layImage"
                             android:layout_below="@+id/textViewName"
                             android:layout_centerHorizontal="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             tools:ignore="RelativeOverlap">
-                            <ImageView
-                                android:id="@+id/textViewType3"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:background="@drawable/background_item_pokemon_span"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
-                            <TextView
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:id="@+id/txtViewType3"
+                            <LinearLayout
+                                android:id="@+id/lay3"
+                                android:background="@drawable/background_item_pokemon"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
-
-                            <ImageView
-                                android:id="@+id/textViewType2"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="8dp"
-                                android:background="@drawable/background_item_pokemon_span"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
-                            <TextView
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:id="@+id/txtViewType2"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/textViewType3"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/background_item_pokemon_span"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/txtViewType3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/lay2"
+                                android:background="@drawable/background_item_pokemon"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
+                                android:layout_height="wrap_content">
 
-                            <ImageView
-                                android:id="@+id/textViewType1"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginBottom="8dp"
-                                android:background="@drawable/background_item_pokemon_span"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
-                            <TextView
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/black"
-                                android:id="@+id/txtViewType1"
+                                <ImageView
+                                    android:id="@+id/textViewType2"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/background_item_pokemon_span"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/txtViewType2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/lay1"
+                                android:background="@drawable/background_item_pokemon"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
-
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/textViewType1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/background_item_pokemon_span"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/txtViewType1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:textSize="14sp"
+                                    tools:ignore="ContentDescription" />
+                            </LinearLayout>
                         </LinearLayout>
                         <TextView
                             android:textColor="@color/black"
